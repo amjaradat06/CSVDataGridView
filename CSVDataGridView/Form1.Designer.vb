@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,18 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim lblEnvURL As System.Windows.Forms.Label
+        Dim EnvNameLabel As System.Windows.Forms.Label
+        Dim lblEnvUsername As System.Windows.Forms.Label
+        Dim lblEnvPassword As System.Windows.Forms.Label
+        Dim UserRoleLabel As System.Windows.Forms.Label
+        Dim EnvTypeLabel As System.Windows.Forms.Label
+        Dim LocationLabel As System.Windows.Forms.Label
+        Dim LoadingTimeLabel As System.Windows.Forms.Label
+        Dim CustomerLabel As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnLoadFromCSV = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,8 +46,114 @@ Partial Class Form1
         Me.txtValue = New System.Windows.Forms.TextBox()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.BtnExportToCSV = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ComboBoxCustomer = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxEnvType = New System.Windows.Forms.ComboBox()
+        Me.txtboxEnvURL = New System.Windows.Forms.TextBox()
+        Me.txtboxEnvName = New System.Windows.Forms.TextBox()
+        Me.txtboxEnvUsername = New System.Windows.Forms.TextBox()
+        Me.txtboxEnvPassword = New System.Windows.Forms.TextBox()
+        Me.txtboxUserRole = New System.Windows.Forms.TextBox()
+        Me.txtboxLoginLocation = New System.Windows.Forms.TextBox()
+        Me.txtboxLoadingTime = New System.Windows.Forms.TextBox()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnEncrypt = New System.Windows.Forms.Button()
+        Me.BtnDecrypt = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        lblEnvURL = New System.Windows.Forms.Label()
+        EnvNameLabel = New System.Windows.Forms.Label()
+        lblEnvUsername = New System.Windows.Forms.Label()
+        lblEnvPassword = New System.Windows.Forms.Label()
+        UserRoleLabel = New System.Windows.Forms.Label()
+        EnvTypeLabel = New System.Windows.Forms.Label()
+        LocationLabel = New System.Windows.Forms.Label()
+        LoadingTimeLabel = New System.Windows.Forms.Label()
+        CustomerLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblEnvURL
+        '
+        lblEnvURL.AutoSize = True
+        lblEnvURL.Location = New System.Drawing.Point(16, 51)
+        lblEnvURL.Name = "lblEnvURL"
+        lblEnvURL.Size = New System.Drawing.Size(32, 13)
+        lblEnvURL.TabIndex = 224
+        lblEnvURL.Text = "URL:"
+        '
+        'EnvNameLabel
+        '
+        EnvNameLabel.AutoSize = True
+        EnvNameLabel.Location = New System.Drawing.Point(16, 28)
+        EnvNameLabel.Name = "EnvNameLabel"
+        EnvNameLabel.Size = New System.Drawing.Size(38, 13)
+        EnvNameLabel.TabIndex = 215
+        EnvNameLabel.Text = "Name:"
+        '
+        'lblEnvUsername
+        '
+        lblEnvUsername.AutoSize = True
+        lblEnvUsername.Location = New System.Drawing.Point(16, 80)
+        lblEnvUsername.Name = "lblEnvUsername"
+        lblEnvUsername.Size = New System.Drawing.Size(58, 13)
+        lblEnvUsername.TabIndex = 217
+        lblEnvUsername.Text = "Username:"
+        '
+        'lblEnvPassword
+        '
+        lblEnvPassword.AutoSize = True
+        lblEnvPassword.Location = New System.Drawing.Point(291, 80)
+        lblEnvPassword.Name = "lblEnvPassword"
+        lblEnvPassword.Size = New System.Drawing.Size(56, 13)
+        lblEnvPassword.TabIndex = 219
+        lblEnvPassword.Text = "Password:"
+        '
+        'UserRoleLabel
+        '
+        UserRoleLabel.AutoSize = True
+        UserRoleLabel.Location = New System.Drawing.Point(292, 132)
+        UserRoleLabel.Name = "UserRoleLabel"
+        UserRoleLabel.Size = New System.Drawing.Size(57, 13)
+        UserRoleLabel.TabIndex = 248
+        UserRoleLabel.Text = "User Role:"
+        '
+        'EnvTypeLabel
+        '
+        EnvTypeLabel.AutoSize = True
+        EnvTypeLabel.Location = New System.Drawing.Point(291, 28)
+        EnvTypeLabel.Name = "EnvTypeLabel"
+        EnvTypeLabel.Size = New System.Drawing.Size(34, 13)
+        EnvTypeLabel.TabIndex = 221
+        EnvTypeLabel.Text = "Type:"
+        '
+        'LocationLabel
+        '
+        LocationLabel.AutoSize = True
+        LocationLabel.Location = New System.Drawing.Point(18, 106)
+        LocationLabel.Name = "LocationLabel"
+        LocationLabel.Size = New System.Drawing.Size(80, 13)
+        LocationLabel.TabIndex = 241
+        LocationLabel.Text = "Login Location:"
+        '
+        'LoadingTimeLabel
+        '
+        LoadingTimeLabel.AutoSize = True
+        LoadingTimeLabel.Location = New System.Drawing.Point(292, 106)
+        LoadingTimeLabel.Name = "LoadingTimeLabel"
+        LoadingTimeLabel.Size = New System.Drawing.Size(102, 13)
+        LoadingTimeLabel.TabIndex = 210
+        LoadingTimeLabel.Text = "Loading Time (Sec):"
+        '
+        'CustomerLabel
+        '
+        CustomerLabel.AutoSize = True
+        CustomerLabel.Location = New System.Drawing.Point(18, 132)
+        CustomerLabel.Name = "CustomerLabel"
+        CustomerLabel.Size = New System.Drawing.Size(54, 13)
+        CustomerLabel.TabIndex = 216
+        CustomerLabel.Text = "Customer:"
         '
         'BtnLoadFromCSV
         '
@@ -52,11 +168,16 @@ Partial Class Form1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 39)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(628, 144)
         Me.DataGridView1.TabIndex = 1
         '
@@ -143,11 +264,161 @@ Partial Class Form1
         Me.BtnUpdate.Text = "Update"
         Me.BtnUpdate.UseVisualStyleBackColor = True
         '
+        'BtnExportToCSV
+        '
+        Me.BtnExportToCSV.Location = New System.Drawing.Point(174, 319)
+        Me.BtnExportToCSV.Name = "BtnExportToCSV"
+        Me.BtnExportToCSV.Size = New System.Drawing.Size(87, 23)
+        Me.BtnExportToCSV.TabIndex = 9
+        Me.BtnExportToCSV.Text = "Save"
+        Me.BtnExportToCSV.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox4.Controls.Add(Me.ComboBoxCustomer)
+        Me.GroupBox4.Controls.Add(Me.ComboBoxEnvType)
+        Me.GroupBox4.Controls.Add(lblEnvURL)
+        Me.GroupBox4.Controls.Add(Me.txtboxEnvURL)
+        Me.GroupBox4.Controls.Add(EnvNameLabel)
+        Me.GroupBox4.Controls.Add(Me.txtboxEnvName)
+        Me.GroupBox4.Controls.Add(lblEnvUsername)
+        Me.GroupBox4.Controls.Add(Me.txtboxEnvUsername)
+        Me.GroupBox4.Controls.Add(lblEnvPassword)
+        Me.GroupBox4.Controls.Add(UserRoleLabel)
+        Me.GroupBox4.Controls.Add(Me.txtboxEnvPassword)
+        Me.GroupBox4.Controls.Add(Me.txtboxUserRole)
+        Me.GroupBox4.Controls.Add(EnvTypeLabel)
+        Me.GroupBox4.Controls.Add(Me.txtboxLoginLocation)
+        Me.GroupBox4.Controls.Add(Me.txtboxLoadingTime)
+        Me.GroupBox4.Controls.Add(LocationLabel)
+        Me.GroupBox4.Controls.Add(LoadingTimeLabel)
+        Me.GroupBox4.Controls.Add(CustomerLabel)
+        Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox4.ForeColor = System.Drawing.Color.Maroon
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 357)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(573, 160)
+        Me.GroupBox4.TabIndex = 10
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Environment Details"
+        '
+        'ComboBoxCustomer
+        '
+        Me.ComboBoxCustomer.FormattingEnabled = True
+        Me.ComboBoxCustomer.Items.AddRange(New Object() {"CHG", "EHG", "FORTIS NXT", "GXXX", "KAAUH", "KAMC", "KAMCJ", "KFMC", "KKESH", "MCHD", "MCME", "MEXX", "MHB", "NSH", "QP", "RHH", "SBAHC", "SFHD", "SFHM", "SGRH", "SQUH", "UHS"})
+        Me.ComboBoxCustomer.Location = New System.Drawing.Point(105, 128)
+        Me.ComboBoxCustomer.Name = "ComboBoxCustomer"
+        Me.ComboBoxCustomer.Size = New System.Drawing.Size(151, 21)
+        Me.ComboBoxCustomer.Sorted = True
+        Me.ComboBoxCustomer.TabIndex = 7
+        '
+        'ComboBoxEnvType
+        '
+        Me.ComboBoxEnvType.AutoCompleteCustomSource.AddRange(New String() {"Config", "Non Config"})
+        Me.ComboBoxEnvType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBoxEnvType.FormattingEnabled = True
+        Me.ComboBoxEnvType.Items.AddRange(New Object() {"Config", "Non Config"})
+        Me.ComboBoxEnvType.Location = New System.Drawing.Point(399, 24)
+        Me.ComboBoxEnvType.Name = "ComboBoxEnvType"
+        Me.ComboBoxEnvType.Size = New System.Drawing.Size(151, 21)
+        Me.ComboBoxEnvType.TabIndex = 1
+        '
+        'txtboxEnvURL
+        '
+        Me.txtboxEnvURL.Location = New System.Drawing.Point(105, 50)
+        Me.txtboxEnvURL.Name = "txtboxEnvURL"
+        Me.txtboxEnvURL.Size = New System.Drawing.Size(446, 20)
+        Me.txtboxEnvURL.TabIndex = 2
+        '
+        'txtboxEnvName
+        '
+        Me.txtboxEnvName.Location = New System.Drawing.Point(105, 24)
+        Me.txtboxEnvName.Name = "txtboxEnvName"
+        Me.txtboxEnvName.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxEnvName.TabIndex = 0
+        '
+        'txtboxEnvUsername
+        '
+        Me.txtboxEnvUsername.Location = New System.Drawing.Point(105, 76)
+        Me.txtboxEnvUsername.Name = "txtboxEnvUsername"
+        Me.txtboxEnvUsername.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxEnvUsername.TabIndex = 3
+        '
+        'txtboxEnvPassword
+        '
+        Me.txtboxEnvPassword.Location = New System.Drawing.Point(399, 77)
+        Me.txtboxEnvPassword.Name = "txtboxEnvPassword"
+        Me.txtboxEnvPassword.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxEnvPassword.TabIndex = 4
+        Me.txtboxEnvPassword.UseSystemPasswordChar = True
+        '
+        'txtboxUserRole
+        '
+        Me.txtboxUserRole.Location = New System.Drawing.Point(400, 129)
+        Me.txtboxUserRole.Name = "txtboxUserRole"
+        Me.txtboxUserRole.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxUserRole.TabIndex = 8
+        '
+        'txtboxLoginLocation
+        '
+        Me.txtboxLoginLocation.Location = New System.Drawing.Point(104, 102)
+        Me.txtboxLoginLocation.Name = "txtboxLoginLocation"
+        Me.txtboxLoginLocation.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxLoginLocation.TabIndex = 5
+        '
+        'txtboxLoadingTime
+        '
+        Me.txtboxLoadingTime.Location = New System.Drawing.Point(400, 103)
+        Me.txtboxLoadingTime.Name = "txtboxLoadingTime"
+        Me.txtboxLoadingTime.Size = New System.Drawing.Size(151, 20)
+        Me.txtboxLoadingTime.TabIndex = 6
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Location = New System.Drawing.Point(267, 319)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(87, 23)
+        Me.BtnDelete.TabIndex = 11
+        Me.BtnDelete.Text = "Delete"
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnEncrypt
+        '
+        Me.BtnEncrypt.Location = New System.Drawing.Point(360, 319)
+        Me.BtnEncrypt.Name = "BtnEncrypt"
+        Me.BtnEncrypt.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEncrypt.TabIndex = 12
+        Me.BtnEncrypt.Text = "Encrypt"
+        Me.BtnEncrypt.UseVisualStyleBackColor = True
+        '
+        'BtnDecrypt
+        '
+        Me.BtnDecrypt.Location = New System.Drawing.Point(441, 319)
+        Me.BtnDecrypt.Name = "BtnDecrypt"
+        Me.BtnDecrypt.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDecrypt.TabIndex = 13
+        Me.BtnDecrypt.Text = "Decrypt"
+        Me.BtnDecrypt.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(522, 319)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 14
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(811, 625)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.BtnDecrypt)
+        Me.Controls.Add(Me.BtnEncrypt)
+        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.BtnExportToCSV)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.txtValue)
@@ -160,6 +431,8 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -179,4 +452,19 @@ Partial Class Form1
     Friend WithEvents txtValue As TextBox
     Friend WithEvents BtnAdd As Button
     Friend WithEvents BtnUpdate As Button
+    Friend WithEvents BtnExportToCSV As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents ComboBoxCustomer As ComboBox
+    Friend WithEvents ComboBoxEnvType As ComboBox
+    Friend WithEvents txtboxEnvURL As TextBox
+    Friend WithEvents txtboxEnvName As TextBox
+    Friend WithEvents txtboxEnvUsername As TextBox
+    Friend WithEvents txtboxEnvPassword As TextBox
+    Friend WithEvents txtboxUserRole As TextBox
+    Friend WithEvents txtboxLoginLocation As TextBox
+    Friend WithEvents txtboxLoadingTime As TextBox
+    Friend WithEvents BtnDelete As Button
+    Friend WithEvents BtnEncrypt As Button
+    Friend WithEvents BtnDecrypt As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class
