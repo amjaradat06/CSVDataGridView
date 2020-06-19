@@ -158,6 +158,6 @@ Public Class Form1
     End Sub
 
     Private Sub txtString1_TextChanged(sender As Object, e As EventArgs) Handles txtString1.TextChanged
-        'Decrypt()
+        'Decrypt() 
     End Sub
 End Class
