@@ -31,7 +31,7 @@ Partial Class Form1
         Dim LocationLabel As System.Windows.Forms.Label
         Dim LoadingTimeLabel As System.Windows.Forms.Label
         Dim CustomerLabel As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BtnLoadFromCSV = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,6 +61,7 @@ Partial Class Form1
         Me.BtnEncrypt = New System.Windows.Forms.Button()
         Me.BtnDecrypt = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         lblEnvURL = New System.Windows.Forms.Label()
         EnvNameLabel = New System.Windows.Forms.Label()
         lblEnvUsername = New System.Windows.Forms.Label()
@@ -72,6 +73,7 @@ Partial Class Form1
         CustomerLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblEnvURL
@@ -169,8 +171,8 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 39)
@@ -220,9 +222,9 @@ Partial Class Form1
         '
         'txtString1
         '
-        Me.txtString1.Location = New System.Drawing.Point(12, 215)
+        Me.txtString1.Location = New System.Drawing.Point(62, 215)
         Me.txtString1.Name = "txtString1"
-        Me.txtString1.Size = New System.Drawing.Size(628, 20)
+        Me.txtString1.Size = New System.Drawing.Size(578, 20)
         Me.txtString1.TabIndex = 3
         '
         'txtDate
@@ -408,11 +410,20 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 14
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(743, 39)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView2.TabIndex = 15
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(811, 625)
+        Me.ClientSize = New System.Drawing.Size(1411, 625)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.BtnDecrypt)
         Me.Controls.Add(Me.BtnEncrypt)
@@ -433,6 +444,7 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -467,4 +479,5 @@ Partial Class Form1
     Friend WithEvents BtnEncrypt As Button
     Friend WithEvents BtnDecrypt As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

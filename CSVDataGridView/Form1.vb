@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text
+Imports System.Net
+Imports System.Xml
 Imports System.Security.Cryptography
 
 
@@ -120,26 +122,26 @@ Public Class Form1
     End Sub
 
     Private Sub Encrypt()
-        Dim sPlainText As String = Me.TextBox1.Text
+        Dim sPlainText As String = Me.txtString1.Text
         If Not String.IsNullOrEmpty(sPlainText) Then
             Dim memoryStream As MemoryStream = New MemoryStream()
             Dim cryptoStream As CryptoStream = New CryptoStream(memoryStream, Me.encryptor, CryptoStreamMode.Write)
             cryptoStream.Write(Me.enc.GetBytes(sPlainText), 0, sPlainText.Length)
             cryptoStream.FlushFinalBlock()
-            Me.TextBox1.Text = Convert.ToBase64String(memoryStream.ToArray())
+            Me.txtString1.Text = Convert.ToBase64String(memoryStream.ToArray())
             memoryStream.Close()
             cryptoStream.Close()
         End If
     End Sub
     Private Sub Decrypt()
-        Dim cypherTextBytes As Byte() = Convert.FromBase64String(Me.TextBox1.Text)
+        Dim cypherTextBytes As Byte() = Convert.FromBase64String(Me.txtString1.Text)
         Dim memoryStream As MemoryStream = New MemoryStream(cypherTextBytes)
         Dim cryptoStream As CryptoStream = New CryptoStream(memoryStream, Me.decryptor, CryptoStreamMode.Read)
         Dim plainTextBytes(cypherTextBytes.Length) As Byte
         Dim decryptedByteCount As Integer = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length)
         memoryStream.Close()
         cryptoStream.Close()
-        Me.TextBox1.Text = Me.enc.GetString(plainTextBytes, 0, decryptedByteCount)
+        Me.txtString1.Text = Me.enc.GetString(plainTextBytes, 0, decryptedByteCount)
     End Sub
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         If MessageBox.Show("Are you sure you want to delete?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes Then
@@ -153,5 +155,9 @@ Public Class Form1
 
     Private Sub BtnDecrypt_Click(sender As Object, e As EventArgs) Handles BtnDecrypt.Click
         Decrypt()
+    End Sub
+
+    Private Sub txtString1_TextChanged(sender As Object, e As EventArgs) Handles txtString1.TextChanged
+        'Decrypt()
     End Sub
 End Class
